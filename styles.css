@@ -1,0 +1,105 @@
+.buttons-container {
+    position: inherit; /* Para que o posicionamento absoluto seja relativo a este container */
+}
+
+.centered {
+    position: absolute;
+    top: 40%; /* Coloca o disco no meio verticalmente */
+    left: 30%; /* Coloca o disco no meio horizontalmente */
+    transform: translate(-50%, -50%); /* Centraliza o disco */
+}
+
+body {
+    background-color: #ffecf8; /* Fundo rosa claro */
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #fff; /* Fundo branco */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+
+}
+
+.genre-button {
+    display: inline-block;
+    background-color: #ff93ad; /* Botão rosa claro */
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para os botões */
+    transition: background-color 0.3s ease;
+}
+
+.genre-button:hover {
+    background-color: #ff6b8a; /* Efeito hover rosa mais escuro */
+}
+
+
+
+.contact-info {
+    color: #444; /* Texto mais escuro */
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.about-button {
+    display: block;
+    background-color: #ff93ad; 
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px auto;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para o botão */
+    transition: background-color 0.3s ease;
+}
+
+.about-button:hover {
+    background-color: #ff6b8a; /* Efeito hover rosa mais escuro */
+}
+.image-wrapper {
+    display: block;
+    background-color: #ff93ad; 
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 20px auto;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para o botão */
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    width: 80%; /* Diminui a largura do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+}
+
+.images {
+    display: flex;
+    flex-wrap: wrap; /* Permite que as imagens quebrem para uma nova linha */
+    justify-content: space-between; /* Distribui as imagens igualmente dentro do contêiner */
+}
+
+.image-wrapper {
+    width: 30%; /* Define a largura das imagens para ocupar 30% do contêiner */
+    margin-bottom: 20px; /* Espaçamento inferior entre as linhas de imagens */
+}
+
+.image-wrapper img {
+    max-width: 100%; /* Garante que as imagens não ultrapassem a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento das Discos</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div id="pai">
+
+            <h3>Gerenciamento de Discos</h3>
+        </div>
+        <div id="filho" onClick="adicionarModal()">
+            <h3>Adicionar</h3>
+        </div>
+    </header>
+    <main>
+        <div id="listaDiscos"></div>
+    </main>
+
+    <dialog id="dialogDiscos">
+        <div id="quadrado-preto">
+
+        </div>
+    </dialog>
+
+    <dialog id="dialogAdd">
+        <div id="quadrado-preto2">
+            <h4 onclick="sairModal()">Voltar</h4>
+            <h2>Adicionar um Disco:</h2>
+            <form id="formAdicionarDisco">
+                <label for="id">ID:</label>
+                <input type="text" id="id" name="id" required>
+
+                <label for="nomeDiscos">Nome:</label>
+                <input type="text" id="nomeDisco" name="nomeDisco" required>
+
+                <label for="imagemDiscos">Imagem:</label>
+                <input type="text" id="imagemDisco" name="imagemDisco" required>
+
+                <label for="anoLancamentoDiscos">Ano de Lançamento:</label>
+                <input type="text" id="anoLancamentoDisco" name="anoLancamentoDisco" required>
+
+                <label for="musicaUmDiscos">Primeira Musica:</label>
+                <input type="text" id="musicaUmDisco" name="musicaUmDisco" required>
+
+                <label for="musicaDoisDiscos">Segunda Musica:</label>
+                <input type="text" id="musicaDoisDisco" name="musicaDoisDisco" required>
+
+                <label for="musicaTresDiscos">Terceira Musica:</label>
+                <input type="text" id="musicaTresDisco" name="musicaTresDisco" required>
+
+
+                <button type="button" onclick="adicionarDisco()" class="botao">Adicionar</button>
+            </form>
+        </div>
+    </dialog>
+    <dialog id="dialogAlt">
+        <div id="quadrado-preto3">
+            <h4 onclick="sairModal3()">Voltar</h4>
+
+            <form id="formAdicionarDisco"> <!-- Renomeado o ID do formulário -->
+                <label for="id">ID:</label>
+                <input type="text" id="idAlt" name="id" required>
+
+                <label for="nomeDiscos">Nome:</label>
+                <input type="text" id="nomeDiscosAlt" name="nomeDiscos" required>
+
+                <label for="imagemDiscos">Imagem:</label>
+                <input type="text" id="imagemDiscosAlt" name="imagemDiscos" required>
+
+                <label for="anoLancamentoDiscos">Ano de Lançamento:</label>
+                <input type="text" id="anoLancamentoDiscosAlt" name="anoLancamentoDiscos" required>
+
+                <label for="musicaUmDiscos">Primeira Musica:</label>
+                <input type="text" id="musicaUmDiscosAlt" name="musicaUmDiscos" required>
+
+                <label for="musicaDoisDiscos">Segunda Musica:</label>
+                <input type="text" id="musicaDoisDiscosAlt" name="musicaDoisDiscos" required>
+
+                <label for="musicaTresDiscos">Terceira Musica:</label>
+                <input type="text" id="musicaTresDiscosAlt" name="musicaTresDiscos" required>
+
+
+                <button type="button" onclick="alterarDisco()" class="botao">Alterar</button>
+                <!-- Alterado o evento de clique -->
+            </form>
+        </div>
+    </dialog>
+
+</body>
+
+</html>

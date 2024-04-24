@@ -14,19 +14,19 @@ server.listen(3000, () => {
 })
 
 server.post('/disco', (req, res) => {
-    const novoDiscos = req.body;
+    const novoDisco = req.body;
 
-    novoDiscos.id = parseInt(novoDiscos.id);
+    novoDisco.id = parseInt(novoDiscos.id);
 
-    if (!novoDiscos.id || !novoDiscos.nome || !novoDiscos.imagem || !novoDiscos.musicaUm || !novoDiscos.musicaDois || !novoDiscos.musicaTres || !novoDiscos.anoLancamento) {
+    if (!novoDisco.id || !novoDisco.nome || !novoDisco.imagem || !novoDisco.musicaUm || !novoDisco.musicaDois || !novoDisco.musicaTres || !novoDisco.anoLancamento) {
         return res.status(400).json({ mensagem: "Dados incompletos, tente novamente" });
     } else {
-        const discosExistente = dadosDiscos.disco.find(discos => discos.id === novoDiscos.id);
+        const discosExistente = dadosDisco.discos.find(disco => disco.id === novoDisco.id);
         if (discosExistente) {
             return res.status(400).json({ mensagem: "ID já existe, tente novamente com um ID diferente" });
         } else {
-            dadosDiscos.disco.push(novoDiscos);
-            salvarDadosDiscos(dadosDiscos);
+            dadosDiscos.disco.push(novoDisco);
+            salvarDadosDiscos(dadosDisco);
             return res.status(201).json({ mensagem: "Novo disco cadastrada com sucesso!" });
         }
     }
@@ -60,6 +60,7 @@ server.delete("/disco/:id", (req, res) => {
     salvarDadosDiscos(dadosDiscos);
     return res.status(200).json({ mensagem: "Jogo excluído com sucesso" });
 });
+
 function salvarDadosDiscos() {
     fs.writeFileSync('./data/disco.json', JSON.stringify(dadosDiscos));
 }

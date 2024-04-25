@@ -46,9 +46,9 @@ server.put('/disco/:id', (req, res) => {
         dadosDiscos.disco[idDiscos].id = atualizarDiscos.id || dadosDiscos.disco[idDiscos].id;
         dadosDiscos.disco[idDiscos].nome = atualizarDiscos.nome || dadosDiscos.disco[idDiscos].nome;
         dadosDiscos.disco[idDiscos].imagem = atualizarDiscos.imagem || dadosDiscos.disco[idDiscos].imagem;
-        dadosDiscos.disco[idDiscos].dmusicaUm = atualizarDiscos.musicaUm || dadosDiscos.disco[idDiscos].musicaUm;
-        dadosDiscos.disco[idDiscos].dmusicaDois = atualizarDiscos.musicaDois || dadosDiscos.disco[idDiscos].musicaDois;
-        dadosDiscos.disco[idDiscos].dmusicaTres = atualizarDiscos.musicaTres|| dadosDiscos.disco[idDiscos].musicaTres;
+        dadosDiscos.disco[idDiscos].musicaUm = atualizarDiscos.musicaUm || dadosDiscos.disco[idDiscos].musicaUm;
+        dadosDiscos.disco[idDiscos].musicaDois = atualizarDiscos.musicaDois || dadosDiscos.disco[idDiscos].musicaDois;
+        dadosDiscos.disco[idDiscos].musicaTres = atualizarDiscos.musicaTres|| dadosDiscos.disco[idDiscos].musicaTres;
         dadosDiscos.disco[idDiscos].anoLancamento = atualizarDiscos.anoLancamento || dadosDiscos.disco[idDiscos].anoLancamento;
         salvarDadosDiscos(dadosDiscos);
         return res.json({ mensagem: "Discos atualizado com sucesso!" });
